@@ -1,88 +1,84 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#3c087e" />
-  <meta name="description" content="Follow ToonzyCat across social platforms. Same cat… different platforms!" />
-  <title>ToonzyCat — I Did Nothing.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root { color-scheme: dark; --yellow:#ffd21c; --purple:#4c0aa3; --deep:#18052e; --cream:#fff5dc; }
-    * { box-sizing:border-box; }
-    body { margin:0; min-height:100vh; color:var(--cream); font-family:'Baloo 2',system-ui,sans-serif; background:radial-gradient(ellipse at 50% 12%, #6c12bd 0%, #47088f 34%, #29064f 72%, #170329 100%); overflow-x:hidden; }
-    body:before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.24; background:repeating-linear-gradient(133deg, transparent 0 95px, rgba(154,70,255,.22) 96px 105px, transparent 106px 180px); }
-    .page { position:relative; width:min(100% - 28px, 940px); margin:0 auto; padding:30px 0 28px; }
-    .hero { text-align:center; position:relative; }
-    .mascot { width:clamp(150px, 33vw, 245px); aspect-ratio:1; object-fit:cover; border-radius:50%; border:5px solid var(--yellow); box-shadow:0 0 0 7px rgba(255,210,28,.12), 0 12px 32px rgba(12,0,30,.45); }
-    h1 { font-family:'Fredoka','Baloo 2',sans-serif; font-size:clamp(2.7rem, 8vw, 5rem); line-height:.95; margin:20px 0 8px; color:var(--yellow); letter-spacing:1px; text-shadow:4px 5px 0 #220443, -1px -1px 0 #fff0a4; }
-    .tagline { margin:0; font-family:'Fredoka',sans-serif; font-weight:700; font-size:clamp(1.05rem,3vw,1.45rem); color:white; text-shadow:2px 3px 0 #230443; }
-    .subtitle { margin:8px 0 26px; color:#f8d9ff; font-size:1rem; }
-    .burst { position:absolute; color:var(--yellow); font-size:clamp(1.5rem,4vw,2.5rem); text-shadow:2px 3px #31065d; user-select:none; }
-    .burst.one { left:7%; top:7%; transform:rotate(-15deg); } .burst.two { right:8%; top:17%; transform:rotate(14deg); } .burst.three { left:12%; top:54%; font-size:1.6rem; } .burst.four { right:12%; top:52%; }
-    .social-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
-    .social-card { --accent:var(--yellow); min-height:116px; display:flex; align-items:center; gap:14px; padding:17px; text-decoration:none; color:white; background:linear-gradient(145deg,rgba(24,5,46,.96),rgba(40,7,76,.97)); border:2px solid var(--yellow); border-radius:23px 19px 25px 18px; box-shadow:5px 6px 0 rgba(20,0,42,.55); position:relative; overflow:hidden; transition:background-color .12s ease, border-color .12s ease, box-shadow .12s ease; -webkit-tap-highlight-color:transparent; }
-    .social-card:before { content:""; position:absolute; width:62px; height:8px; background:var(--accent); opacity:.9; right:-13px; top:12px; transform:rotate(-36deg); }
-    .social-card:after { content:"✦"; position:absolute; color:var(--yellow); font-size:17px; left:10px; bottom:4px; opacity:.9; }
-    .social-card:active { background:#5a1295; border-color:#fff0a1; box-shadow:1px 2px 0 rgba(20,0,42,.55); }
-    .social-card:focus-visible { outline:3px solid white; outline-offset:4px; }
-    .icon-wrap { flex:0 0 53px; width:53px; height:53px; display:grid; place-items:center; border-radius:16px; color:white; box-shadow:0 3px 0 rgba(0,0,0,.22); }
-    .icon-wrap svg { width:31px; height:31px; fill:currentColor; }
-    .instagram { background:linear-gradient(135deg,#7b39d8,#f23879,#ff9d35); }
-    .tiktok { background:#090909; color:#fff; }
-    .youtube { background:#ff0033; }
-    .xbrand { background:#050505; }
-    .facebook { background:#1877f2; }
-    .threads { background:#080808; }
-    .card-copy { min-width:0; display:flex; flex-direction:column; gap:1px; }
-    .platform { font-family:'Fredoka','Baloo 2',sans-serif; font-size:1.28rem; font-weight:700; line-height:1.1; }
-    .handle { color:var(--yellow); font-size:.91rem; overflow-wrap:anywhere; }
-    .joke { color:#f8eaff; font-size:.84rem; line-height:1.25; margin-top:4px; }
-    footer { text-align:center; padding:26px 0 4px; color:#e0c4ff; font-size:.9rem; }
-    footer strong { color:var(--yellow); }
-    @media (max-width:560px) { .page { width:min(100% - 22px, 460px); padding-top:22px; } .social-grid { gap:11px; } .social-card { min-height:125px; padding:12px 10px; gap:9px; border-radius:19px; } .icon-wrap { flex-basis:42px; width:42px; height:42px; border-radius:13px; } .icon-wrap svg { width:25px;height:25px; } .platform { font-size:1.1rem; } .handle { font-size:.78rem; } .joke { font-size:.76rem; } .burst.one {left:1%;} .burst.two {right:2%;} }
-    @media (max-width:360px) { .social-card { flex-direction:column; align-items:flex-start; } .joke { font-size:.73rem; } }
-    @media (prefers-reduced-motion: reduce) { .social-card { transition:none; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#3c087e">
+<meta name="description" content="Follow ToonzyCat across social platforms. Same cat… different platforms!">
+<title>ToonzyCat — I Did Nothing.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--yellow:#ffd21c;--purple:#4c0aa3;--deep:#18052e;--cream:#fff5dc}
+*{box-sizing:border-box}
+html{min-height:100%;background:#170329}
+body{margin:0;min-height:100vh;color:var(--cream);font-family:'Baloo 2',system-ui,sans-serif;background:radial-gradient(ellipse at 50% 12%,#6c12bd 0%,#47088f 34%,#29064f 72%,#170329 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background:repeating-linear-gradient(133deg,transparent 0 95px,rgba(154,70,255,.22) 96px 105px,transparent 106px 180px)}
+.page{position:relative;width:min(940px,calc(100% - 28px));margin:0 auto;padding:30px 0 28px}
+.hero{text-align:center;position:relative}
+.mascot{display:block;width:clamp(150px,33vw,245px);aspect-ratio:1;object-fit:cover;margin:0 auto;border-radius:50%;border:5px solid var(--yellow);box-shadow:0 0 0 7px rgba(255,210,28,.12),0 12px 32px rgba(12,0,30,.45)}
+h1{font-family:'Fredoka','Baloo 2',sans-serif;font-size:clamp(2.7rem,8vw,5rem);line-height:.95;margin:20px 0 8px;color:var(--yellow);letter-spacing:1px;text-shadow:4px 5px 0 #220443,-1px -1px 0 #fff0a4}
+.tagline{margin:0;font-family:'Fredoka',sans-serif;font-weight:700;font-size:clamp(1.05rem,3vw,1.45rem);color:white;text-shadow:2px 3px 0 #230443}
+.subtitle{margin:8px 0 26px;color:#f8d9ff;font-size:1rem}
+.burst{position:absolute;color:var(--yellow);font-size:clamp(1.5rem,4vw,2.5rem);text-shadow:2px 3px #31065d;user-select:none;pointer-events:none}
+.burst.one{left:7%;top:7%;transform:rotate(-15deg)}.burst.two{right:8%;top:17%;transform:rotate(14deg)}.burst.three{left:12%;top:54%;font-size:1.6rem}.burst.four{right:12%;top:52%}
+.social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.social-card{--accent:var(--yellow);min-height:116px;display:flex;align-items:center;gap:14px;padding:17px;text-decoration:none;color:white;background:linear-gradient(145deg,rgba(24,5,46,.96),rgba(40,7,76,.97));border:2px solid var(--yellow);border-radius:23px 19px 25px 18px;box-shadow:5px 6px 0 rgba(20,0,42,.55);position:relative;overflow:hidden;transition:background-color .12s ease,border-color .12s ease,box-shadow .12s ease,transform .12s ease;-webkit-tap-highlight-color:transparent}
+.social-card:before{content:"";position:absolute;width:62px;height:8px;background:var(--accent);opacity:.9;right:-13px;top:12px;transform:rotate(-36deg);pointer-events:none}
+.social-card:after{content:"✦";position:absolute;color:var(--yellow);font-size:17px;left:10px;bottom:4px;opacity:.9;pointer-events:none}
+.social-card:active{background:#5a1295;border-color:#fff0a1;box-shadow:1px 2px 0 rgba(20,0,42,.55);transform:translate(2px,3px)}
+.social-card:focus-visible{outline:3px solid white;outline-offset:4px}
+.icon-wrap{flex:0 0 53px;width:53px;height:53px;display:grid;place-items:center;border-radius:16px;color:white;box-shadow:0 3px 0 rgba(0,0,0,.22)}
+.icon-wrap svg{width:31px;height:31px;fill:currentColor}
+.instagram{background:linear-gradient(135deg,#7b39d8,#f23879,#ff9d35)}.tiktok{background:#090909;color:#fff}.youtube{background:#ff0033}.xbrand{background:#050505}.facebook{background:#1877f2}.threads{background:#080808}
+.card-copy{min-width:0;display:flex;flex-direction:column;gap:1px}
+.platform{font-family:'Fredoka','Baloo 2',sans-serif;font-size:1.28rem;font-weight:700;line-height:1.1}
+.handle{color:var(--yellow);font-size:.91rem;overflow-wrap:anywhere}
+.joke{color:#f8eaff;font-size:.84rem;line-height:1.25;margin-top:4px}
+footer{text-align:center;padding:26px 0 4px;color:#e0c4ff;font-size:.9rem}footer strong{color:var(--yellow)}
+@media(max-width:560px){.page{width:min(460px,calc(100% - 22px));padding-top:22px}.social-grid{gap:11px}.social-card{min-height:125px;padding:12px 10px;gap:9px;border-radius:19px}.icon-wrap{flex-basis:42px;width:42px;height:42px;border-radius:13px}.icon-wrap svg{width:25px;height:25px}.platform{font-size:1.1rem}.handle{font-size:.78rem}.joke{font-size:.76rem}.burst.one{left:1%}.burst.two{right:2%}}
+@media(max-width:360px){.social-card{flex-direction:column;align-items:flex-start}.joke{font-size:.73rem}}
+@media(prefers-reduced-motion:reduce){.social-card{transition:none}}
+</style>
 </head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <span class="burst one" aria-hidden="true">✦</span><span class="burst two" aria-hidden="true">✦</span><span class="burst three" aria-hidden="true">✧</span><span class="burst four" aria-hidden="true">✦</span>
-      <img class="mascot" src="assets/toonzycat-avatar.png" alt="ToonzyCat, the orange cartoon cat" />
-      <h1>TOONZYCAT!</h1>
-      <p class="tagline">I DID NOTHING.</p>
-      <p class="subtitle">Same cat… different platforms! 😼</p>
-    </header>
-    <section class="social-grid" aria-label="Follow ToonzyCat">
-      <a class="social-card" href="https://instagram.com/toonzycat?mdxt=MWpwYW9hcWpxOGJwOQ%3D" target="_blank" rel="noopener noreferrer" style="--accent:#ff4d91">
-        <span class="icon-wrap instagram" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm5 3.1a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 2.2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5.2-3.8a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/></svg></span>
-        <span class="card-copy"><span class="platform">Instagram</span><span class="handle">@toonzycat</span><span class="joke">I DID NOTHING. 😇</span></span>
-      </a>
-      <a class="social-card" href="https://www.tiktok.com/@toonzycat?_r=1&_t=ZS-9AX4usE8w9G" target="_blank" rel="noopener noreferrer" style="--accent:#ffde28">
-        <span class="icon-wrap tiktok" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.6 6.1a6.8 6.8 0 0 1-4.1-4.8h-3.8v14.2a3.1 3.1 0 1 1-2.7-3.1V8.6a7 7 0 1 0 6.5 7V8.4a10.5 10.5 0 0 0 5.1 1.3V5.9c-.4.1-.7.2-1 .2Z"/></svg></span>
-        <span class="card-copy"><span class="platform">TikTok</span><span class="handle">@toonzycat</span><span class="joke">CHAOS IS MY JOB. 😼</span></span>
-      </a>
-      <a class="social-card" href="https://youtube.com/@toonzyc_at?si=NE65aIDwMv6Tkr7C" target="_blank" rel="noopener noreferrer" style="--accent:#ff0033">
-        <span class="icon-wrap youtube" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg></span>
-        <span class="card-copy"><span class="platform">YouTube</span><span class="handle">@toonzyc_at</span><span class="joke">WATCH ME RUIN EVERYTHING. 💥</span></span>
-      </a>
-      <a class="social-card" href="https://x.com/toonzycat" target="_blank" rel="noopener noreferrer" style="--accent:#ffffff">
-        <span class="icon-wrap xbrand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.4L1.8 2h6.5l4.4 6.8L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z"/></svg></span>
-        <span class="card-copy"><span class="platform">X</span><span class="handle">@toonzycat</span><span class="joke">NO REGRETS. ONLY CRIMES. 😹</span></span>
-      </a>
-      <a class="social-card" href="https://www.facebook.com/share/1F9frnkKK9/" target="_blank" rel="noopener noreferrer" style="--accent:#1877f2">
-        <span class="icon-wrap facebook" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.6 22v-9h3l.5-3.5h-3.5V7.2c0-1 .3-1.7 1.8-1.7h1.9V2.4c-.9-.1-1.9-.2-2.8-.2-2.9 0-4.9 1.8-4.9 5.1v2.2H6.3V13h3.3v9h4Z"/></svg></span>
-        <span class="card-copy"><span class="platform">Facebook</span><span class="handle">ToonzyCat</span><span class="joke">DON’T TELL MY HUMAN. 🤫</span></span>
-      </a>
-      <a class="social-card" href="https://www.threads.com/@toonzycat" target="_blank" rel="noopener noreferrer" style="--accent:#ffffff">
-        <span class="icon-wrap threads" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12.1 2c-5.5 0-8.8 3.8-8.8 9.8 0 6.3 3.3 10.2 8.8 10.2 4.8 0 7.8-2.6 7.8-6.7 0-2.6-1.4-4.4-3.8-5.2-.4-3.3-2.2-5-5.2-5-2.5 0-4.2 1.4-4.7 3.8l2.2.5c.3-1.4 1.1-2.1 2.5-2.1 1.7 0 2.6.9 2.9 2.4a13 13 0 0 0-2-.1c-3.8 0-6 1.8-6 4.7 0 2.6 1.9 4.4 4.7 4.4 2.5 0 4.3-1.4 5-3.8 1.1.6 1.7 1.5 1.7 2.8 0 2.8-2 4.4-5.2 4.4-4.2 0-6.4-3-6.4-8.2 0-4.8 2.2-7.7 6.5-7.7 2.8 0 4.6 1.3 5.4 4l2.1-.7C18.4 3.9 15.8 2 12.1 2Zm-.3 14.5c-1.6 0-2.5-.8-2.5-2.1 0-1.5 1.2-2.4 3.6-2.4.8 0 1.4.1 2 .2-.4 2.7-1.5 4.3-3.1 4.3Z"/></svg></span>
-        <span class="card-copy"><span class="platform">Threads</span><span class="handle">@toonzycat</span><span class="joke">I REGRET NOTHING. 🐾</span></span>
-      </a>
-    </section>
-    <footer><strong>TOONZYCAT</strong> · Be part of the chaos! 💛</footer>
-  </main>
+<main class="page">
+<header class="hero">
+<span class="burst one" aria-hidden="true">✦</span><span class="burst two" aria-hidden="true">✦</span><span class="burst three" aria-hidden="true">✧</span><span class="burst four" aria-hidden="true">✦</span>
+<!-- The avatar is in the repository root, beside index.html. -->
+<img class="mascot" src="toonzycat-avatar.png" alt="ToonzyCat, the orange cartoon cat">
+<h1>TOONZYCAT!</h1>
+<p class="tagline">I DID NOTHING.</p>
+<p class="subtitle">Same cat… different platforms! 😼</p>
+</header>
+<section class="social-grid" aria-label="Follow ToonzyCat">
+<a class="social-card" href="https://instagram.com/toonzycat?mdxt=MWpwYW9hcWpxOGJwOQ%3D" target="_blank" rel="noopener noreferrer" style="--accent:#ff4d91">
+<span class="icon-wrap instagram" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm5 3.1a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 2.2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5.2-3.8a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/></svg></span>
+<span class="card-copy"><span class="platform">Instagram</span><span class="handle">@toonzycat</span><span class="joke">I DID NOTHING. 😇</span></span>
+</a>
+<a class="social-card" href="https://www.tiktok.com/@toonzycat?_r=1&_t=ZS-9AX4usE8w9G" target="_blank" rel="noopener noreferrer" style="--accent:#ffde28">
+<span class="icon-wrap tiktok" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.6 6.1a6.8 6.8 0 0 1-4.1-4.8h-3.8v14.2a3.1 3.1 0 1 1-2.7-3.1V8.6a7 7 0 1 0 6.5 7V8.4a10.5 10.5 0 0 0 5.1 1.3V5.9c-.4.1-.7.2-1 .2Z"/></svg></span>
+<span class="card-copy"><span class="platform">TikTok</span><span class="handle">@toonzycat</span><span class="joke">CHAOS IS MY JOB. 😼</span></span>
+</a>
+<a class="social-card" href="https://youtube.com/@toonzyc_at?si=NE65aIDwMv6Tkr7C" target="_blank" rel="noopener noreferrer" style="--accent:#ff0033">
+<span class="icon-wrap youtube" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg></span>
+<span class="card-copy"><span class="platform">YouTube</span><span class="handle">@toonzyc_at</span><span class="joke">WATCH ME RUIN EVERYTHING. 💥</span></span>
+</a>
+<a class="social-card" href="https://x.com/toonzycat" target="_blank" rel="noopener noreferrer" style="--accent:#ffffff">
+<span class="icon-wrap xbrand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.4L1.8 2h6.5l4.4 6.8L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z"/></svg></span>
+<span class="card-copy"><span class="platform">X</span><span class="handle">@toonzycat</span><span class="joke">NO REGRETS. ONLY CRIMES. 😹</span></span>
+</a>
+<a class="social-card" href="https://www.facebook.com/share/1F9frnkKK9/" target="_blank" rel="noopener noreferrer" style="--accent:#1877f2">
+<span class="icon-wrap facebook" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.6 22v-9h3l.5-3.5h-3.5V7.2c0-1 .3-1.7 1.8-1.7h1.9V2.4c-.9-.1-1.9-.2-2.8-.2-2.9 0-4.9 1.8-4.9 5.1v2.2H6.3V13h3.3v9h4Z"/></svg></span>
+<span class="card-copy"><span class="platform">Facebook</span><span class="handle">ToonzyCat</span><span class="joke">DON’T TELL MY HUMAN. 🤫</span></span>
+</a>
+<a class="social-card" href="https://www.threads.com/@toonzycat" target="_blank" rel="noopener noreferrer" style="--accent:#ffffff">
+<span class="icon-wrap threads" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12.1 2c-5.5 0-8.8 3.8-8.8 9.8 0 6.3 3.3 10.2 8.8 10.2 4.8 0 7.8-2.6 7.8-6.7 0-2.6-1.4-4.4-3.8-5.2-.4-3.3-2.2-5-5.2-5-2.5 0-4.2 1.4-4.7 3.8l2.2.5c.3-1.4 1.1-2.1 2.5-2.1 1.7 0 2.6.9 2.9 2.4a13 13 0 0 0-2-.1c-3.8 0-6 1.8-6 4.7 0 2.6 1.9 4.4 4.7 4.4 2.5 0 4.3-1.4 5-3.8 1.1.6 1.7 1.5 1.7 2.8 0 2.8-2 4.4-5.2 4.4-4.2 0-6.4-3-6.4-8.2 0-4.8 2.2-7.7 6.5-7.7 2.8 0 4.6 1.3 5.4 4l2.1-.7C18.4 3.9 15.8 2 12.1 2Zm-.3 14.5c-1.6 0-2.5-.8-2.5-2.1 0-1.5 1.2-2.4 3.6-2.4.8 0 1.4.1 2 .2-.4 2.7-1.5 4.3-3.1 4.3Z"/></svg></span>
+<span class="card-copy"><span class="platform">Threads</span><span class="handle">@toonzycat</span><span class="joke">I REGRET NOTHING. 🐾</span></span>
+</a>
+</section>
+<footer><strong>TOONZYCAT</strong> · Be part of the chaos! 💛</footer>
+</main>
 </body>
 </html>
